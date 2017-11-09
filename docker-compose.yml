@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: payme:dev
+    ports:
+     - "9000:9000"
+     - "9999:9999"
+    volumes:
+     - .:/app
+    stdin_open: true
+    tty: true
