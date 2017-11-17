@@ -1,12 +1,16 @@
-version: '3'
+version: "3"
+
 services:
-  web:
+  webapp:
     build: .
-    image: payme:dev
     ports:
-     - "9000:9000"
-     - "9999:9999"
+      - "9000:9000"
+      - "9001:9001"
+      - "9999:9999"
     volumes:
-     - .:/app
-    stdin_open: true
+      - ".:/app"
+      - "libs:/root/.ivy2/cache"
     tty: true
+
+volumes:
+  libs:

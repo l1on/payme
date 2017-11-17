@@ -9,4 +9,4 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y sbt=0.13.16
 
-CMD ["sbt", "-jvm-debug", "9999"]
+CMD ["sbt", "run"]

@@ -6,8 +6,6 @@
 # An example controller showing a sample home page
 POST    /tasks                           controllers.TaskController.create
 GET     /tasks                           controllers.TaskController.list
-DELETE  /tasks                           controllers.TaskController.deleteAll
-
 
 GET     /tasks/:id                       controllers.TaskController.get(id: Int)
 DELETE  /tasks/:id                       controllers.TaskController.delete(id: Int)
