@@ -8,7 +8,7 @@ cache:
 
 script:
   - docker build -t payme_api_test -f Dockerfile.test .
-  - docker run payme_api_test -v ~/.cache/docker/.ivy2/cache:/root/.ivy2/cache
+  - docker run -v ~/.cache/docker/.ivy2/cache:/root/.ivy2/cache payme_api_test
 
 notifications:
   email:
