@@ -10,6 +10,6 @@ script:
   - docker build -t payme_api_test -f Dockerfile.test .
   - docker run -v ~/.cache/docker/.ivy2/cache:/root/.ivy2/cache payme_api_test
 
- notifications:
-    slack: payme-ci:xW8uGKEq7SEUqrTW0HUq3kRj
+notifications:
+  slack: payme-ci:xW8uGKEq7SEUqrTW0HUq3kRj
 
