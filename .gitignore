@@ -1,9 +1,5 @@
 .idea
-*.iml
-
-
 logs
-
 target
-project/project/
+project/project/target
 project/target/

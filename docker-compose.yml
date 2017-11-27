@@ -1,16 +1,16 @@
 version: "3"
 
 services:
-  webapp:
-    build: .
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     ports:
-      - "9000:9000"
-      - "9001:9001"
-      - "9999:9999"
+      - 9000:9000
+      - 9001:9001
+      - 9999:9999
     volumes:
-      - ".:/app"
-      - "libs:/root/.ivy2/cache"
+      - .:/app
+      - ~/.cache/docker/.ivy2/cache:/root/.ivy2/cache
     tty: true
 
-volumes:
-  libs:

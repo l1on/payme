@@ -1,0 +1,16 @@
+sudo: required
+services:
+  - docker
+
+cache:
+  directories:
+  - $HOME/.cache/docker/.ivy2/cache
+
+script:
+  - docker build -t payme_api_test -f Dockerfile.test .
+  - docker run payme_api_test -v ~/.cache/docker/.ivy2/cache:/root/.ivy2/cache
+
+notifications:
+  email:
+    on_success: always
+
